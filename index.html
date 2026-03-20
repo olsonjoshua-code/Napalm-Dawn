@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Napalm Dawn – Vietnam and the Nixon Presidency</title>
+<title>Napalm Dawn – From the Great Society to Watergate</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -935,14 +935,411 @@ newsroom:`<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" class="s
   <rect x="283" y="162" width="90" height="22" fill="#c8c0b0" opacity="0.5"/>
   <text x="280" y="210" font-family="Georgia,serif" font-size="8" fill="#6a5830" text-anchor="middle" opacity="0.8">New York Times Newsroom · June 13, 1971</text>
 </svg>`,
+
+// ─── NEW SCENE: JFK / Cold War ───
+jfk_cold_war:`<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" class="scene-svg">
+  <defs><radialGradient id="cwGlow" cx="50%" cy="40%" r="40%"><stop offset="0%" stop-color="#2850a0" stop-opacity="0.10"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+  <rect width="560" height="220" fill="#060810"/>
+  <rect width="560" height="220" fill="url(#cwGlow)"/>
+  <rect x="0" y="0" width="270" height="220" fill="#06060c"/>
+  <rect x="290" y="0" width="270" height="220" fill="#060c06"/>
+  <rect x="268" y="0" width="4" height="220" fill="#1a1808"/>
+  <text x="135" y="60" font-family="Georgia,serif" font-size="28" fill="#1a2a6b" text-anchor="middle" opacity="0.5">★</text>
+  <text x="420" y="60" font-family="Georgia,serif" font-size="22" fill="#1a3a1a" text-anchor="middle" opacity="0.5">☭</text>
+  <rect x="160" y="70" width="240" height="80" fill="#0a0a10" stroke="#1a2030" stroke-width="1"/>
+  <text x="280" y="92" font-family="Georgia,serif" font-size="8" fill="#4a6aaa" text-anchor="middle" letter-spacing="2">CUBAN MISSILE CRISIS</text>
+  <text x="280" y="108" font-family="Georgia,serif" font-size="7" fill="#3a5a8a" text-anchor="middle">13 Days · October 1962</text>
+  <text x="280" y="122" font-family="Georgia,serif" font-size="7" fill="#3a5a8a" text-anchor="middle">The World at the Edge of Nuclear War</text>
+  <text x="280" y="136" font-family="Georgia,serif" font-size="7" fill="#2a4a6a" text-anchor="middle">Kennedy vs. Khrushchev</text>
+  <ellipse cx="100" cy="155" rx="12" ry="13" fill="#c8a878"/>
+  <rect x="89" y="167" width="22" height="22" fill="#1a2a4a"/>
+  <ellipse cx="460" cy="155" rx="12" ry="13" fill="#c09060"/>
+  <rect x="449" y="167" width="22" height="22" fill="#1a0808"/>
+  <text x="280" y="212" font-family="Georgia,serif" font-size="8" fill="#4a6aaa" text-anchor="middle" opacity="0.7">Cold War · Berlin · Space Race · 1961–1963</text>
+</svg>`,
+
+// ─── NEW SCENE: LBJ Great Society ───
+lbj_great_society:`<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" class="scene-svg">
+  <defs><radialGradient id="gsGlow" cx="50%" cy="50%" r="40%"><stop offset="0%" stop-color="#1a6a30" stop-opacity="0.08"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+  <rect width="560" height="220" fill="#060a06"/>
+  <rect width="560" height="220" fill="url(#gsGlow)"/>
+  <rect x="100" y="115" width="360" height="14" fill="#1a1a08" rx="2" stroke="#2a2a10" stroke-width="1"/>
+  <ellipse cx="280" cy="100" rx="13" ry="14" fill="#c09060"/>
+  <rect x="268" y="113" width="24" height="22" fill="#3a3a1a"/>
+  <ellipse cx="120" cy="96" rx="10" ry="11" fill="#8B5E3C"/>
+  <ellipse cx="160" cy="94" rx="9" ry="10" fill="#c49a6c"/>
+  <ellipse cx="200" cy="98" rx="10" ry="11" fill="#3d1a0a"/>
+  <ellipse cx="360" cy="96" rx="10" ry="11" fill="#a07040"/>
+  <ellipse cx="400" cy="94" rx="9" ry="10" fill="#c49a6c"/>
+  <ellipse cx="440" cy="98" rx="10" ry="11" fill="#8B5E3C"/>
+  <rect x="30" y="48" width="100" height="58" fill="#0a1408" stroke="#1a3010" stroke-width="1"/>
+  <text x="80" y="66" font-family="Georgia,serif" font-size="7" fill="#4a8a3a" text-anchor="middle">MEDICARE</text>
+  <text x="80" y="79" font-family="Georgia,serif" font-size="7" fill="#4a8a3a" text-anchor="middle">MEDICAID</text>
+  <text x="80" y="92" font-family="Georgia,serif" font-size="7" fill="#4a8a3a" text-anchor="middle">HEAD START</text>
+  <text x="80" y="100" font-family="Georgia,serif" font-size="6" fill="#3a6a2a" text-anchor="middle">ESEA 1965</text>
+  <rect x="430" y="48" width="100" height="58" fill="#0a1408" stroke="#1a3010" stroke-width="1"/>
+  <text x="480" y="66" font-family="Georgia,serif" font-size="7" fill="#4a8a3a" text-anchor="middle">VOTING</text>
+  <text x="480" y="79" font-family="Georgia,serif" font-size="7" fill="#4a8a3a" text-anchor="middle">RIGHTS</text>
+  <text x="480" y="92" font-family="Georgia,serif" font-size="7" fill="#4a8a3a" text-anchor="middle">ACT 1965</text>
+  <text x="480" y="100" font-family="Georgia,serif" font-size="6" fill="#3a6a2a" text-anchor="middle">WAR ON POV.</text>
+  <rect x="160" y="14" width="240" height="28" fill="#0a1008" stroke="#1a3010" stroke-width="1"/>
+  <text x="280" y="26" font-family="Georgia,serif" font-size="9" fill="#4a8a3a" text-anchor="middle" letter-spacing="2">THE GREAT SOCIETY</text>
+  <text x="280" y="38" font-family="Georgia,serif" font-size="6" fill="#3a6a2a" text-anchor="middle">LBJ · 1964–1968 · Most ambitious domestic program since FDR</text>
+  <text x="280" y="212" font-family="Georgia,serif" font-size="8" fill="#4a8a3a" text-anchor="middle" opacity="0.7">Government expanded its role — but Vietnam would consume it all</text>
+</svg>`,
+
+// ─── NEW SCENE: Warren Court ───
+warren_court_nd:`<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" class="scene-svg">
+  <rect width="560" height="220" fill="#06060c"/>
+  <rect x="20" y="18" width="520" height="10" fill="#0d0c08" rx="1"/>
+  <rect x="18" y="16" width="12" height="120" fill="#0d0c08" rx="1"/>
+  <rect x="530" y="16" width="12" height="120" fill="#0d0c08" rx="1"/>
+  <rect x="30" y="62" width="500" height="54" fill="#100c06" stroke="#2e2010" stroke-width="1" rx="2"/>
+  <rect x="30" y="62" width="500" height="12" fill="#1a1408" rx="1"/>
+  <ellipse cx="75" cy="85" rx="11" ry="12" fill="#c49a6c"/><rect x="65" y="96" width="20" height="10" fill="#0a0a1a"/>
+  <ellipse cx="130" cy="85" rx="11" ry="12" fill="#8B5E3C"/><rect x="120" y="96" width="20" height="10" fill="#0a0a1a"/>
+  <ellipse cx="185" cy="85" rx="11" ry="12" fill="#3d1a0a"/><rect x="175" y="96" width="20" height="10" fill="#0a0a1a"/>
+  <ellipse cx="240" cy="85" rx="11" ry="12" fill="#b08050"/><rect x="230" y="96" width="20" height="10" fill="#0a0a1a"/>
+  <ellipse cx="280" cy="79" rx="13" ry="14" fill="#c49a6c"/><rect x="269" y="92" width="22" height="10" fill="#0a0a1a"/>
+  <ellipse cx="320" cy="85" rx="11" ry="12" fill="#8B5E3C"/><rect x="310" y="96" width="20" height="10" fill="#0a0a1a"/>
+  <ellipse cx="375" cy="85" rx="11" ry="12" fill="#3d1a0a"/><rect x="365" y="96" width="20" height="10" fill="#0a0a1a"/>
+  <ellipse cx="430" cy="85" rx="11" ry="12" fill="#b08050"/><rect x="420" y="96" width="20" height="10" fill="#0a0a1a"/>
+  <ellipse cx="485" cy="85" rx="11" ry="12" fill="#c49a6c"/><rect x="475" y="96" width="20" height="10" fill="#0a0a1a"/>
+  <rect x="277" y="46" width="3" height="22" fill="#c07818" opacity="0.5"/>
+  <line x1="279" y1="56" x2="259" y2="64" stroke="#c07818" stroke-width="1.5" opacity="0.5"/>
+  <line x1="279" y1="56" x2="299" y2="64" stroke="#c07818" stroke-width="1.5" opacity="0.5"/>
+  <rect x="140" y="142" width="280" height="28" fill="#0d0c08" stroke="#2e2010" stroke-width="1"/>
+  <text x="280" y="155" font-family="Georgia,serif" font-size="8" fill="#c07818" text-anchor="middle" letter-spacing="2">EQUAL JUSTICE UNDER LAW</text>
+  <text x="280" y="166" font-family="Georgia,serif" font-size="6" fill="#8a7050" text-anchor="middle">Miranda · Gideon · Mapp · Reynolds · Engel</text>
+  <text x="280" y="212" font-family="Georgia,serif" font-size="8" fill="#8a7050" text-anchor="middle" opacity="0.7">The Warren Court expanded rights — and generated a powerful backlash</text>
+</svg>`,
+
+// ─── NEW SCENE: 1968 / fracture ───
+fracture_1968:`<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" class="scene-svg">
+  <defs><radialGradient id="f68Glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#c03030" stop-opacity="0.07"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+  <rect width="560" height="220" fill="#08060a"/>
+  <rect width="560" height="220" fill="url(#f68Glow)"/>
+  <rect x="30" y="20" width="150" height="80" fill="#0a0606" stroke="#2a0808" stroke-width="1"/>
+  <text x="105" y="38" font-family="Georgia,serif" font-size="7" fill="#8a3020" text-anchor="middle" letter-spacing="1">JANUARY 31</text>
+  <text x="105" y="52" font-family="Georgia,serif" font-size="8" fill="#c04030" text-anchor="middle">TET OFFENSIVE</text>
+  <text x="105" y="66" font-family="Georgia,serif" font-size="6" fill="#8a3020" text-anchor="middle">North Vietnam strikes</text>
+  <text x="105" y="78" font-family="Georgia,serif" font-size="6" fill="#8a3020" text-anchor="middle">100+ South Vietnamese cities</text>
+  <rect x="205" y="20" width="150" height="80" fill="#0a0606" stroke="#2a0808" stroke-width="1"/>
+  <text x="280" y="38" font-family="Georgia,serif" font-size="7" fill="#8a3020" text-anchor="middle" letter-spacing="1">APRIL 4</text>
+  <text x="280" y="52" font-family="Georgia,serif" font-size="8" fill="#c04030" text-anchor="middle">MLK ASSASSINATED</text>
+  <text x="280" y="66" font-family="Georgia,serif" font-size="6" fill="#8a3020" text-anchor="middle">Memphis, Tennessee</text>
+  <text x="280" y="78" font-family="Georgia,serif" font-size="6" fill="#8a3020" text-anchor="middle">Cities burn across America</text>
+  <rect x="380" y="20" width="150" height="80" fill="#0a0606" stroke="#2a0808" stroke-width="1"/>
+  <text x="455" y="38" font-family="Georgia,serif" font-size="7" fill="#8a3020" text-anchor="middle" letter-spacing="1">JUNE 5</text>
+  <text x="455" y="52" font-family="Georgia,serif" font-size="8" fill="#c04030" text-anchor="middle">RFK ASSASSINATED</text>
+  <text x="455" y="66" font-family="Georgia,serif" font-size="6" fill="#8a3020" text-anchor="middle">Los Angeles, California</text>
+  <text x="455" y="78" font-family="Georgia,serif" font-size="6" fill="#8a3020" text-anchor="middle">The last antiwar hope is gone</text>
+  <rect x="30" y="118" width="500" height="60" fill="#08060a" stroke="#2a1808" stroke-width="1"/>
+  <text x="280" y="136" font-family="Georgia,serif" font-size="8" fill="#a04030" text-anchor="middle" letter-spacing="1">AUGUST · CHICAGO DEMOCRATIC CONVENTION</text>
+  <text x="280" y="150" font-family="Georgia,serif" font-size="7" fill="#8a3020" text-anchor="middle">Police beat protesters in Grant Park · "The whole world is watching"</text>
+  <text x="280" y="164" font-family="Georgia,serif" font-size="7" fill="#6a2010" text-anchor="middle">Nixon wins on "law and order" · The New Deal coalition fractures</text>
+  <text x="280" y="212" font-family="Georgia,serif" font-size="8" fill="#8a4030" text-anchor="middle" opacity="0.7">1968 — The year the center did not hold</text>
+</svg>`,
+
 };
 const CHAPTERS=[
 // ═══════════════════════════════════════════════════════
-// CHAPTER 1: INTO THE QUAGMIRE
+// CHAPTER 1: KENNEDY AND THE COLD WAR
+// NEW — Theme: Power · Conflict and Change · American Identity
+// Sets up containment logic that drives Vietnam
+// ═══════════════════════════════════════════════════════
+{
+  id:'kennedy_coldwar',
+  num:1,
+  title:'Kennedy and the Cold War',
+  icon:'🌙',
+  period:'Washington D.C. and the World · 1961–1963',
+  context:"John F. Kennedy entered the White House in January 1961 as the youngest man ever elected president, inheriting a Cold War that had already defined two decades of American foreign policy. The logic of containment — stopping the spread of communism anywhere it appeared — had been established under Truman and refined under Eisenhower. Kennedy believed in it. His inaugural address promised America would 'bear any burden' and 'pay any price' in defense of liberty. Within 90 days, he had approved a disastrous CIA-backed invasion of Cuba. Within 18 months, he had brought the world to the edge of nuclear war over Soviet missiles in Cuba. His presidency was defined by crises: Berlin, Cuba, Laos, Vietnam. Each one tested the same fundamental question: how far should America go to contain communism — and at what cost?",
+  standards:['SS.912.A.7.4'],
+  eocFocus:'Kennedy presidency; Cold War; Cuban Missile Crisis; containment; New Frontier; SS.912.A.7.4',
+  keyVocab:[
+    {term:'Containment',def:'U.S. Cold War policy of preventing the spread of communism anywhere it appeared — the guiding logic that led America into Vietnam'},
+    {term:'New Frontier',def:'Kennedy\'s governing philosophy — calling Americans to sacrifice, public service, and confronting Cold War challenges'},
+    {term:'Cuban Missile Crisis',def:'13 days in October 1962 when Soviet nuclear missiles in Cuba brought the world to the edge of nuclear war'},
+    {term:'Brinkmanship',def:'The Cold War strategy of pushing a dangerous situation to the edge of conflict to force the other side to back down'},
+  ],
+  cardEarned:'lbj',
+  badge:'first_briefing',
+  timelineEntry:{figure:'domino',year:'1961',sprite:'🌙',title:'Kennedy and the Cold War',desc:'Kennedy inherited the Cold War and committed America to containing communism anywhere it appeared. His decisions — from Cuba to Berlin to Vietnam advisors — established the logic that would drive U.S. policy through the 1960s.'},
+  beats:[
+    // ── Theme: Power · Conflict and Change ──
+    {
+      scene:'jfk_cold_war',
+      location:'The White House, Washington D.C.',
+      date:'January 20, 1961 — The Inaugural',
+      narrative:"You are a young policy advisor in the new Kennedy administration. The inauguration is over. Kennedy's speech is still ringing in your ears: 'Let every nation know, whether it wishes us well or ill, that we shall pay any price, bear any burden, meet any hardship, support any friend, oppose any foe, in order to assure the survival and the success of liberty.'\n\nIn the briefing room this morning, the new national security team is reviewing commitments around the world. Cuba: a CIA-trained exile force is already being prepared to invade and topple Castro. Berlin: Soviet Premier Khrushchev is threatening to sign a separate peace treaty with East Germany that could cut off Western access to the city. Laos: a communist insurgency is spreading. And Vietnam: 685 American military advisors are already in South Vietnam, with requests for more arriving weekly.\n\nThe logic of containment applies everywhere at once. The question is where to draw the line — and what 'bearing any burden' actually means in practice.",
+      charVoice:'',
+      decision:"What was the fundamental problem with Kennedy's pledge to 'bear any burden' in defense of liberty?",
+      choices:[
+        {text:"It committed the United States to defending any government anywhere that faced a communist threat, regardless of whether that government was democratic, popular, or worth defending",correct:true,feedback:"This is the central flaw of unlimited containment as a foreign policy doctrine. Kennedy's rhetoric was inspiring, but it created a strategic trap: any communist challenge anywhere became a test of American resolve. South Vietnam's government was corrupt and commanded limited popular support — but the logic of containment said America had to defend it anyway, or be seen as weak. The same logic that sounded noble in an inaugural address would drive the commitment of half a million troops to Southeast Asia within a decade.",std:'SS.912.A.7.4'},
+        {text:"It was a purely rhetorical commitment that no one in the Kennedy administration intended to actually honor in practice",correct:false,feedback:"Kennedy's team took the commitment seriously — perhaps too seriously. The Bay of Pigs, the Berlin crisis response, the Cuban Missile Crisis management, and the expansion of Vietnam advisors all reflected genuine attempts to honor the containment pledge. The problem was not insincerity but overreach: the doctrine created obligations that the United States could not sustain everywhere at once.",std:'SS.912.A.7.4'},
+        {text:"It was constitutionally invalid because only Congress has the authority to commit American forces to foreign conflicts",correct:false,feedback:"Kennedy's pledge was a statement of foreign policy philosophy, not a specific military commitment. The constitutional question about war powers was real but separate — it became critical with the Gulf of Tonkin Resolution in 1964 and the War Powers Resolution in 1973. Kennedy's inaugural was a statement of principle, not a treaty or a declaration of war.",std:'SS.912.A.7.4'},
+        {text:"It threatened to bankrupt the United States by requiring military spending that the economy could not sustain",correct:false,feedback:"Military spending was a genuine concern — Eisenhower's farewell address had just warned about the military-industrial complex — but economic collapse was not the immediate problem with unlimited containment. The more direct cost was strategic overextension: committing to defend too many places against too many threats simultaneously, creating obligations that drove American policy into conflicts like Vietnam regardless of whether they served genuine strategic interests.",std:'SS.912.A.7.4'},
+      ]
+    },
+    // ── Theme: Power · Conflict and Change ──
+    {
+      scene:'jfk_cold_war',
+      location:'The White House, Washington D.C.',
+      date:'October 16–28, 1962 — Cuban Missile Crisis',
+      narrative:"On October 16, CIA photographs confirm Soviet nuclear missiles under construction in Cuba — 90 miles from Florida. The missiles can hit Washington D.C. in 13 minutes. Kennedy assembles a secret advisory group, ExComm. For 13 days they debate in secret while the world goes about its business, unaware it is living through the most dangerous moment in human history.\n\nThe military pushes for immediate air strikes and invasion. Kennedy's brother Robert, the Attorney General, worries about the moral legacy of a surprise attack — 'Pearl Harbor in reverse.' Kennedy chooses a middle path: a naval quarantine of Cuba, combined with direct private communication with Soviet Premier Khrushchev.\n\nOn October 27 — the most dangerous day — a U-2 spy plane is shot down over Cuba and a Soviet submarine nearly launches a nuclear torpedo after losing contact with Moscow. The submarine's second-in-command, Vasili Arkhipov, refuses to authorize the launch. The crisis ends when Khrushchev agrees to remove the missiles. Kennedy secretly agrees to remove American missiles from Turkey and pledges not to invade Cuba.\n\nThe world will not learn how close it came for decades.",
+      charVoice:'',
+      decision:"What did Kennedy's handling of the Cuban Missile Crisis reveal about decision-making under extreme pressure?",
+      choices:[
+        {text:"It showed that American military superiority always provides a clear path to victory in any Cold War confrontation",correct:false,feedback:"American military superiority was real, but it provided no clean path forward in Cuba. Air strikes would have killed Soviet personnel and almost certainly triggered a Soviet response. An invasion might have found nuclear weapons already deployed to field commanders. Kennedy's advisors were unanimous that military options carried catastrophic risks. The crisis showed that superiority in conventional weapons was irrelevant when both sides had nuclear arsenals — force was not a usable option.",std:'SS.912.A.7.4'},
+        {text:"It demonstrated that the most dangerous moments in foreign policy require restraint, back-channel communication, and a willingness to offer the adversary a face-saving exit",correct:true,feedback:"Kennedy's management of the missile crisis is considered one of the masterworks of Cold War diplomacy. By choosing quarantine over air strikes, he bought time for negotiation. By secretly agreeing to remove Turkish missiles, he gave Khrushchev a face-saving way to back down that was never made public. The resolution required both leaders to resist enormous pressure from their own military advisors. The lesson — that nuclear-armed adversaries must always leave each other a way out — became foundational to Cold War management.",std:'SS.912.A.7.4'},
+        {text:"It proved that the Soviet Union was fundamentally irrational and could only be deterred by the credible threat of immediate nuclear retaliation",correct:false,feedback:"The missile crisis showed the opposite: Khrushchev was rational, calculating, and ultimately willing to back down when offered a face-saving path. He removed the missiles not because he was threatened with nuclear annihilation but because Kennedy's private diplomatic offer gave him a way to present the outcome as a partial victory. Treating adversaries as irrational is itself a dangerous error in foreign policy — it removes the possibility of negotiated resolution.",std:'SS.912.A.7.4'},
+        {text:"It showed that secret presidential decision-making is always more effective than democratic deliberation in foreign policy crises",correct:false,feedback:"The secrecy of ExComm's deliberations was tactically justified — public debate would have tipped off the Soviets and constrained options. But this is separate from whether secret presidential war-making is constitutionally or democratically legitimate. The Cuban crisis was also an exceptional circumstance; the same argument was later used to justify the secret bombing of Cambodia and other actions that went far beyond the missile crisis's narrow circumstances.",std:'SS.912.A.7.4'},
+      ]
+    },
+    // ── CONTINUITY/CHANGE REFLECTION ── Theme: Power · American Identity
+    {
+      scene:'jfk_cold_war',
+      location:'Washington D.C.',
+      date:'November 22, 1963 — Dallas',
+      narrative:"On November 22, 1963, Kennedy is assassinated in Dallas, Texas. He has served 1,036 days. He is 46 years old.\n\nThe nation is in shock. Kennedy had seemed to many Americans like the beginning of something — a new generation, a new possibility. In 99 minutes, Vice President Lyndon Johnson is sworn in as the 36th President aboard Air Force One, Kennedy's casket in the same cabin.\n\nKennedy left behind an unfinished presidency. His domestic agenda had stalled in Congress. His civil rights bill had not passed. His Vietnam policy was ambiguous — 16,000 advisors were in Southeast Asia, with no clear exit. His Cold War record was mixed: the missile crisis was a triumph; the Bay of Pigs a humiliation; the arms race continued.\n\nWhat he left behind most powerfully was a language of commitment: America would bear any burden. His successor would inherit that language — and the wars it had already started.\n\nPause: What stayed the same after Kennedy died? What changed?",
+      charVoice:'',
+      // ── Continuity/Change reflection ──
+      decision:"What was the most significant thing that continued unchanged from Kennedy's presidency into Johnson's — and why did it matter?",
+      choices:[
+        {text:"The commitment to containment in Vietnam, which LBJ inherited as an obligation and escalated into a full-scale war",correct:true,feedback:"This is the essential continuity. Kennedy had committed 16,000 military advisors to South Vietnam and resisted pressure to withdraw. Johnson inherited that commitment along with the underlying logic: losing Vietnam to communism would signal American weakness globally. Whether Kennedy would have escalated as Johnson did is debated by historians — but the commitment itself was continuous. Johnson did not invent American involvement in Vietnam; he inherited it and transformed its scale. The burden Kennedy promised to bear fell most heavily on Johnson and the 58,000 Americans who died.",std:'SS.912.A.7.4'},
+        {text:"Kennedy's personal charisma and public communication style, which Johnson successfully replicated to maintain public trust",correct:false,feedback:"Johnson was deeply aware that he could not replicate Kennedy's charisma and did not try to. He was a different kind of politician — master of legislative process rather than public inspiration. The contrast between the two men was striking and was a source of genuine anxiety for Johnson throughout his presidency. Continuity of communication style was not a feature of the transition.",std:'SS.912.A.7.4'},
+        {text:"The stalled domestic agenda, which remained blocked in Congress because Johnson lacked Kennedy's political relationships",correct:false,feedback:"This is the opposite of what happened. Johnson was a far more effective legislative operator than Kennedy had been. Where Kennedy's domestic agenda had stalled — Medicare, civil rights, education funding — Johnson pushed it through in a remarkable burst of legislation in 1964–65. The continuity was in the goals; the change was in the execution.",std:'SS.912.A.7.4'},
+        {text:"The Bay of Pigs failure, which continued to damage American credibility with Latin American nations throughout Johnson's presidency",correct:false,feedback:"The Bay of Pigs was a significant embarrassment for Kennedy, but it was a specific event rather than an ongoing continuity. Johnson's foreign policy in Latin America had its own crises — most notably the 1965 intervention in the Dominican Republic — but these were not direct continuations of the Bay of Pigs situation.",std:'SS.912.A.7.4'},
+      ]
+    },
+  ]
+},
+
+// ═══════════════════════════════════════════════════════
+// CHAPTER 2: THE GREAT SOCIETY
+// NEW — Theme: Economy and Work · Freedom and Rights · Power
+// ── Transition: "The torch passed — and with it, every burden Kennedy had promised to bear" ──
+// ═══════════════════════════════════════════════════════
+{
+  id:'great_society_nd',
+  num:2,
+  title:'The Great Society',
+  icon:'🏛️',
+  period:'Washington D.C. · 1963–1966',
+  context:"Lyndon Johnson was everything Kennedy was not: crude, emotionally raw, relentlessly transactional, and possessed of a legislative genius no president has matched before or since. He had served 24 years in Congress and knew every senator's price, fear, and ambition. After Dallas, he converted the nation's grief into political momentum, passing the Civil Rights Act of 1964 — which Kennedy could not — and then winning a landslide election that gave him the congressional majority to build what he called the Great Society. In 1965 alone, Congress passed Medicare, Medicaid, the Voting Rights Act, the Elementary and Secondary Education Act, the Higher Education Act, and the Immigration and Nationality Act. It was the most productive legislative session since the New Deal. But even as LBJ was transforming American domestic life, he was also escalating in Vietnam. By 1967, both programs were in crisis. The war was consuming the resources and the political capital that the Great Society needed to survive.",
+  standards:['SS.912.A.7.13'],
+  eocFocus:'LBJ; Great Society; Medicare/Medicaid; Voting Rights Act; role of government; SS.912.A.7.13',
+  keyVocab:[
+    {term:'Great Society',def:'LBJ\'s domestic program — Medicare, Medicaid, the Voting Rights Act, federal education funding, and the War on Poverty'},
+    {term:'War on Poverty',def:'LBJ\'s 1964 initiative declaring the federal government responsible for ending economic deprivation through programs like Head Start and Job Corps'},
+    {term:'Medicare / Medicaid',def:'1965 health insurance programs covering Americans over 65 and the poor — still the foundation of American health care today'},
+    {term:'Credibility Gap',def:'The growing distance between what the government told the public about Vietnam and the reality on the ground — began here, became fatal later'},
+  ],
+  cardEarned:'lbj',
+  badge:'quagmire',
+  timelineEntry:{figure:'domino',year:'1964',sprite:'🏛️',title:'The Great Society',desc:'LBJ transformed Kennedy\'s assassination into legislative momentum. Medicare, Medicaid, the Voting Rights Act, and the War on Poverty permanently expanded the federal government\'s role — but Vietnam would consume the resources and political will to sustain them.'},
+  beats:[
+    // ── Theme: Economy and Work · Power ──
+    {
+      scene:'lbj_great_society',
+      location:'Washington D.C.',
+      date:'1964–1965',
+      narrative:"You are a legislative aide watching Lyndon Johnson operate at the height of his power. He is running the Senate the way he ran it as Majority Leader: knowing what each member wants, calling in favors, flattering some and threatening others. The results are extraordinary.\n\nJuly 2, 1964: The Civil Rights Act passes. Johnson signs it with 72 pens, handing them to the civil rights leaders watching in the room. July 30, 1965: He travels to Independence, Missouri, to sign Medicare into law at the library of Harry Truman — who first proposed national health insurance twenty years earlier. August 6, 1965: The Voting Rights Act passes, ending the legal barriers that kept millions of Black Americans from the ballot box.\n\nThe argument behind all of these programs is the same: poverty, illness, and discrimination are structural problems that individuals cannot solve alone. Only collective action through government — funded by everyone, available to all — can address them at scale.\n\nOpponents call it socialism. Supporters call it the fulfillment of American democracy. The debate is genuine and it is not over.",
+      charVoice:'',
+      decision:"What was the core argument of LBJ's Great Society — and why was it controversial?",
+      choices:[
+        {text:"It argued that poverty and inequality were structural problems requiring government investment — not individual moral failures — and that a just democracy must provide basic security to all its citizens",correct:true,feedback:"This is the intellectual foundation of the Great Society. Before LBJ, the dominant American tradition held that economic hardship was primarily a personal problem — solved by individual effort and family responsibility. The Great Society argued the opposite: that poverty was created by structural barriers (lack of education, health care, racial discrimination, and economic immobility) that no individual could overcome alone. Government was the only institution with the scale to address these barriers. The controversy was genuine: it implied a fundamental expansion of what Americans expected government to do and to pay for.",std:'SS.912.A.7.13'},
+        {text:"It argued that the federal government should directly own major industries and redistribute income equally among all Americans",correct:false,feedback:"The Great Society was not socialism in any economic sense. Doctors remained private. Hospitals remained mostly private. Businesses remained private. The programs expanded access to health care, education, and economic opportunity — they did not nationalize industries or establish income equality. The 'socialism' label was a political argument by opponents, not an accurate description of the programs.",std:'SS.912.A.7.13'},
+        {text:"It argued that civil rights legislation was sufficient to address inequality, and that additional economic programs were unnecessary once legal discrimination was abolished",correct:false,feedback:"LBJ explicitly rejected this argument. He understood that legal equality without economic opportunity was incomplete. The Voting Rights Act and the War on Poverty were parts of the same vision: a society where the barriers to full participation — legal, economic, and educational — were systematically removed. The two were complementary, not alternatives.",std:'SS.912.A.7.13'},
+        {text:"It argued that the primary purpose of government was to win the Cold War, and that domestic programs should be funded only if they directly strengthened America's position against the Soviet Union",correct:false,feedback:"Johnson presented the Great Society as independent of Cold War justification, rooted in democratic values and human dignity. He did occasionally argue that reducing poverty at home strengthened America's credibility abroad, but this was a secondary argument. The Great Society's foundation was domestic: a belief that American democracy owed all its citizens the chance for a decent life.",std:'SS.912.A.7.13'},
+      ]
+    },
+    // ── Theme: Power · Economy and Work ──
+    {
+      scene:'lbj_great_society',
+      location:'Washington D.C. and Southeast Asia',
+      date:'1966–1967 — The Great Society Under Strain',
+      narrative:"By 1966, LBJ is trying to do two enormous things simultaneously: build the Great Society at home and win the war in Vietnam. Both require money. Both require congressional support. Both require the public's trust.\n\nThe numbers are brutal. Vietnam cost $25 billion in 1967. Medicare and Medicaid cost $4 billion in their first year — but are growing rapidly. The federal budget is under enormous pressure. Johnson refuses to raise taxes to pay for both, fearing it will trigger a political battle that will kill one program or the other. Inflation begins to rise.\n\nHis advisors warn him privately: you cannot have guns and butter. You must choose. Johnson does not choose. He tries to sustain both — and succeeds, for a while, through a combination of deficit spending, political pressure, and optimistic projections about Vietnam that he knows are not fully accurate.\n\nThe credibility gap is not just about Vietnam. It is about whether Johnson is telling the public the truth about the costs of what he is building.",
+      charVoice:'',
+      decision:"What does LBJ's attempt to sustain both the Great Society and Vietnam simultaneously reveal about the limits of presidential power?",
+      choices:[
+        {text:"It reveals that a popular president with a large congressional majority can always sustain two major national initiatives at the same time if he is willing to run budget deficits",correct:false,feedback:"The 'guns and butter' strategy worked politically in the short run but created serious economic consequences — inflation, budget pressure, and ultimately the underfunding of Great Society programs. Political majorities and deficit spending are not substitutes for making hard choices about priorities. Johnson's attempt to avoid that choice ultimately damaged both programs.",std:'SS.912.A.7.13'},
+        {text:"It reveals that presidential power has real limits — that foreign wars consume the political capital, public trust, and financial resources that domestic programs require to succeed",correct:true,feedback:"This is one of the most important lessons of the Johnson presidency. The Great Society's most ambitious programs — the War on Poverty, Model Cities, expanded education funding — required sustained political support and adequate funding. Vietnam consumed both. By 1967, the congressional coalition that had passed Great Society legislation was fracturing over the war. By 1968, Johnson's approval ratings had collapsed. The foreign policy decisions that seemed separable from domestic policy turned out to be intimately connected.",std:'SS.912.A.7.13'},
+        {text:"It reveals that the federal bureaucracy was too large and inefficient to implement major programs in health care and education at the same time",correct:false,feedback:"Bureaucratic capacity was a real challenge for some Great Society programs, but it was not the primary constraint on Johnson's ability to sustain both guns and butter. The fundamental limits were financial and political: the war consumed resources that would have funded domestic programs, and it destroyed the public trust and congressional coalition that made the Great Society legislatively possible.",std:'SS.912.A.7.13'},
+        {text:"It reveals that Johnson should have chosen Vietnam over domestic programs, since national security always takes precedence over social spending",correct:false,feedback:"This is a values judgment disguised as a historical observation. Johnson himself did not believe national security always took precedence — he believed he could have both. His tragedy was not that he chose wrong, but that he refused to choose, and that the attempt to sustain both ultimately damaged both. The lesson is about the reality of political limits and the costs of avoiding hard choices, not about which program was inherently more important.",std:'SS.912.A.7.13'},
+      ]
+    },
+    // ── CONTINUITY/CHANGE REFLECTION ── Theme: Economy and Work · Power
+    {
+      scene:'lbj_great_society',
+      location:'America — 1967',
+      date:'1967 — Taking Stock',
+      narrative:"By 1967, the Great Society has permanently transformed the relationship between Americans and their government. Medicare covers every American over 65. Medicaid covers the poor. Federal dollars flow to public schools for the first time. The poverty rate is falling — from 19% in 1964 toward 11% by the early 1970s. Legal barriers to Black voting have been demolished.\n\nBut Vietnam is accelerating. Military spending is crowding out social spending. The Democratic coalition that passed the Great Society is fracturing. Martin Luther King Jr. says the war has 'shot down' the Great Society on the battlefields of Vietnam.\n\nAnd the credibility gap — the distance between what the government says and what is actually happening — is growing. Not just about Vietnam. About the promises of the Great Society itself.\n\nWho gained from these changes? Who was left out? What problems remained?\n\n— Government expanded its role in American life. But debates over its limits — and its honesty — intensified.",
+      charVoice:'',
+      decision:"What was the most important long-term consequence of the Great Society's expansion of federal programs?",
+      choices:[
+        {text:"It permanently established that the federal government has a responsibility for basic economic security — even though that commitment was immediately tested by the costs of Vietnam",correct:true,feedback:"The Great Society's lasting significance is structural. Even after Vietnam destroyed Johnson's presidency and produced a conservative backlash, the programs themselves proved extremely durable. Medicare and Medicaid today cover over 130 million Americans. The Voting Rights Act transformed Southern politics for a generation. Federal education funding remains foundational. The programs survived because they created constituencies — millions of Americans who depended on them — that proved politically impossible to eliminate. Johnson changed what Americans expected government to provide.",std:'SS.912.A.7.13'},
+        {text:"It permanently ended poverty in America by providing every citizen with adequate health care, education, and economic support",correct:false,feedback:"The War on Poverty reduced the poverty rate significantly but did not end poverty. Johnson's own goal proved more aspirational than achievable. The programs made real differences in millions of lives — but structural economic inequality, racial discrimination, and the underfunding caused by Vietnam meant the goals of the Great Society were only partially realized. The promise exceeded the result, which contributed to both the programs' political vulnerability and the growing sense of government overpromising.",std:'SS.912.A.7.13'},
+        {text:"It proved that Democratic Party programs are always more effective than Republican ones at solving social problems",correct:false,feedback:"The Great Society's record is complex enough that this partisan conclusion is not historically justified. Some programs — Medicare, Head Start, the Voting Rights Act — proved highly effective and durable. Others underperformed expectations. The honest assessment is that some government programs address some problems well in some contexts, which is not a partisan finding.",std:'SS.912.A.7.13'},
+        {text:"It caused the economic collapse of the late 1960s through excessive government spending that destroyed private investment",correct:false,feedback:"The 1960s were actually a period of strong economic growth. The inflationary pressures of the late 1960s and the stagflation of the 1970s had multiple causes — primarily the oil price shocks of 1973 and the monetary costs of Vietnam. Great Society programs contributed to budget pressure, but they were not the primary cause of the economic difficulties that followed.",std:'SS.912.A.7.13'},
+      ]
+    },
+  ]
+},
+
+// ═══════════════════════════════════════════════════════
+// CHAPTER 3: THE WARREN COURT
+// NEW — Theme: Freedom and Rights · Power
+// ── Transition: "Rights expanded through the courts — but conflict over their meaning grew sharper" ──
+// ═══════════════════════════════════════════════════════
+{
+  id:'warren_court_nd',
+  num:3,
+  title:'The Warren Court',
+  icon:'⚖️',
+  period:'Washington D.C. · 1961–1966',
+  context:"While presidents and Congresses fought over legislation, a third branch of government was quietly transforming American life. The Supreme Court under Chief Justice Earl Warren issued a series of landmark decisions in the 1960s that expanded the rights of ordinary Americans more dramatically than any previous era. Gideon v. Wainwright (1963) guaranteed a lawyer to anyone accused of a crime. Miranda v. Arizona (1966) required police to inform suspects of their rights before interrogation. Mapp v. Ohio (1961) barred illegally obtained evidence from court. Engel v. Vitale (1962) banned organized prayer in public schools. Each decision was based on the same principle: the Bill of Rights meant something real, and the federal government — including the courts — had an obligation to make it real for everyone, not just those who could afford lawyers or lived in states that chose to respect those rights. The Warren Court's decisions were wildly popular in some quarters and generated fierce backlash in others. Richard Nixon would run for president in 1968 on a pledge to appoint justices who would reverse them.",
+  standards:['SS.912.A.7.4','SS.912.C.2.4'],
+  eocFocus:'Warren Court; Miranda; Gideon; expansion of civil liberties; judicial review; SS.912.A.7.4',
+  keyVocab:[
+    {term:'Judicial Review',def:'The power of courts to strike down laws that violate the Constitution — the Warren Court used this more aggressively than any previous Court'},
+    {term:'Miranda v. Arizona (1966)',def:'Required police to inform suspects of their rights before interrogation — created the most famous legal phrase in American culture'},
+    {term:'Gideon v. Wainwright (1963)',def:'Required states to provide attorneys to defendants who cannot afford them — established that constitutional rights must be equally accessible regardless of wealth'},
+    {term:'Exclusionary Rule',def:'Legal principle from Mapp v. Ohio: evidence obtained illegally cannot be used in court — designed to deter police misconduct'},
+  ],
+  cardEarned:'pentagon_papers',
+  badge:'tet_survivor',
+  timelineEntry:{figure:'pentagon_papers',year:'1963',sprite:'⚖️',title:'The Warren Court',desc:'Miranda, Gideon, and Mapp permanently expanded the rights of accused persons. The Warren Court made the Bill of Rights real for ordinary Americans — and generated a conservative backlash that would reshape the Supreme Court for decades.'},
+  beats:[
+    // ── Theme: Freedom and Rights · Power ──
+    {
+      scene:'warren_court_nd',
+      location:'Supreme Court of the United States, Washington D.C.',
+      date:'1961–1966 — The Rights Revolution',
+      narrative:"You are a public defender in a county courthouse in 1963. Before today, your state was not required to provide attorneys to defendants who could not afford them. Most people charged with crimes have been representing themselves — sometimes not even understanding the charges against them.\n\nToday the Supreme Court's decision in Gideon v. Wainwright changes that. Clarence Earl Gideon, a drifter with a ninth-grade education, had been convicted of breaking into a pool hall after the Florida court denied his request for a lawyer. He wrote his own petition to the Supreme Court from his prison cell. The Court ruled 9-0 in his favor: the Sixth Amendment right to counsel is real, and states must provide attorneys to those who cannot afford them.\n\nGideon is retried with a real lawyer and acquitted in 26 minutes.\n\nA constitutional right that applies only to people who can afford lawyers is not an equal right — it is a privilege of wealth.",
+      charVoice:'',
+      decision:"What principle did Gideon v. Wainwright establish about constitutional rights in a democratic society?",
+      choices:[
+        {text:"Constitutional rights are only meaningful when they are equally accessible regardless of a person's wealth or social status",correct:true,feedback:"This is the core principle of Gideon — and it is broader than criminal law. A right that exists on paper but is practically accessible only to those with money is not a right; it is a privilege. The Sixth Amendment had existed since the Constitution was ratified, but for most Americans who could not afford lawyers, it meant nothing. Gideon forced states to make the right real. The decision permanently changed the American criminal justice system — and raised a broader question the 1960s would keep asking: which other rights existed on paper but not in practice?",std:'SS.912.A.7.4'},
+        {text:"The federal government should fund all legal costs in any criminal proceeding to ensure equal outcomes regardless of the evidence",correct:false,feedback:"Gideon required states to provide attorneys to those who could not afford them — it was about access to legal representation, not about guaranteeing equal outcomes regardless of evidence. The goal was equal process, not equal results. The distinction matters: the Constitution guarantees a fair trial, not a particular verdict.",std:'SS.912.A.7.4'},
+        {text:"State courts have no authority to try criminal cases without first obtaining approval from federal courts",correct:false,feedback:"Gideon did not eliminate state court authority. It established a constitutional minimum — a floor that all state courts must meet — while leaving states broad authority over how they conduct their courts. The ruling applied the Sixth Amendment to the states through the Fourteenth Amendment, a process called incorporation, but it did not federalize criminal prosecution.",std:'SS.912.A.7.4'},
+        {text:"Defendants who cannot afford lawyers should be tried by judges rather than juries to ensure a more consistent application of legal standards",correct:false,feedback:"Gideon's holding was specifically about the right to counsel — an attorney — not about the jury system. The two rights are distinct constitutional guarantees. Gideon said nothing about replacing juries with judges as an alternative to providing lawyers.",std:'SS.912.A.7.4'},
+      ]
+    },
+    // ── Theme: Freedom and Rights · Power ──
+    {
+      scene:'warren_court_nd',
+      location:'Supreme Court of the United States, Washington D.C.',
+      date:'June 13, 1966 — Miranda v. Arizona',
+      narrative:"Ernesto Miranda was a truck driver arrested in Phoenix in 1963. He was questioned for two hours without being told he had the right to remain silent or the right to an attorney. He confessed. He was convicted.\n\nThe Supreme Court overturned his conviction 5-4. In the majority opinion, Chief Justice Warren wrote that the Fifth Amendment's protection against self-incrimination required police to actively inform suspects of their rights before interrogation. Without that warning, any confession was presumptively coerced.\n\nThe ruling created what became the most recognized legal phrase in American culture:\n\n'You have the right to remain silent. Anything you say can and will be used against you in a court of law. You have the right to an attorney. If you cannot afford an attorney, one will be appointed for you.'\n\nLaw enforcement was furious. Police chiefs argued Miranda would make convictions impossible. The four dissenting justices argued the Court was handcuffing police in favor of criminals. Supporters argued the opposite: a confession obtained through ignorance or fear is unreliable — and the Constitution was designed to protect everyone, including the guilty.",
+      charVoice:'',
+      decision:"Why did the Warren Court require police to actively inform suspects of their rights rather than simply assuming suspects already knew them?",
+      choices:[
+        {text:"Because most people — especially the poor, uneducated, and non-English-speaking — do not actually know their constitutional rights, making an uninformed waiver of those rights meaningless",correct:true,feedback:"This is the core logic of Miranda. The Fifth Amendment's protection against self-incrimination only functions as a real protection if suspects actually know they have it. Research and common experience showed that most people being interrogated — particularly those who were poor, had limited education, or did not speak English fluently — did not know they could refuse to speak or demand a lawyer. A right you don't know you have is not a right you can meaningfully exercise. Miranda required the government to bridge that gap by actively informing suspects.",std:'SS.912.A.7.4'},
+        {text:"Because the Supreme Court determined that all police interrogations are inherently coercive and no confession obtained through questioning can ever be trusted",correct:false,feedback:"Miranda did not rule all police-obtained confessions unreliable. It created a procedural requirement: inform suspects of their rights, and if they knowingly waive those rights and speak, the statement is admissible. The concern was specifically about confessions obtained without that warning — where the suspect may not have known they could stay silent. Voluntary, informed confessions remained valid evidence.",std:'SS.912.A.7.4'},
+        {text:"Because Congress had passed a law requiring Miranda warnings, and the Supreme Court was simply enforcing the legislative mandate",correct:false,feedback:"Miranda was a Supreme Court decision, not congressional legislation. The Court derived the warning requirement directly from the Fifth Amendment's protection against self-incrimination. Congress later passed a law attempting to overrule Miranda, which the Supreme Court rejected in Dickerson v. United States (2000), reaffirming that Miranda is a constitutional requirement, not just a policy preference that Congress can override.",std:'SS.912.A.7.4'},
+        {text:"Because giving suspects advance notice of their rights makes interrogations more efficient by reducing the number of confessions that are later thrown out on procedural grounds",correct:false,feedback:"Miranda's purpose was constitutional protection, not administrative efficiency. The ruling did create procedural certainty — police who followed the warning could be more confident their evidence was admissible — but this was a consequence, not the purpose. The constitutional foundation was the Fifth Amendment right against self-incrimination and the Sixth Amendment right to counsel.",std:'SS.912.A.7.4'},
+      ]
+    },
+    // ── CONTINUITY/CHANGE REFLECTION ── Theme: Freedom and Rights · Conflict and Change
+    {
+      scene:'warren_court_nd',
+      location:'America — 1966',
+      date:'1966 — Rights Expanded, Backlash Grows',
+      narrative:"By 1966, the Warren Court has transformed what it means to be accused of a crime in America. Police procedures have changed. Every courtroom in the country applies new rules. The Constitution's Bill of Rights — once largely theoretical for ordinary people — has been made real through judicial interpretation.\n\nBut the backlash is fierce. 'Impeach Earl Warren' billboards appear across the South. Police departments argue Miranda makes their jobs impossible. Religious conservatives are furious about the school prayer decision. George Wallace campaigns on restoring law and order. Richard Nixon is watching carefully, preparing a 1968 presidential run on a pledge to appoint 'strict constructionist' justices who will reverse the Warren Court's decisions.\n\nThe expansion of rights through unelected courts raises a fundamental democratic question: Should judges who are appointed for life be able to override the decisions of elected majorities? The Warren Court's answer was yes — when those majorities were violating the Constitution. But the political cost of that answer would reshape the Supreme Court for the next fifty years.\n\n— Rights expanded through the courts, but conflict over their meaning grew sharper.",
+      charVoice:'',
+      decision:"What democratic tension did the Warren Court's rights expansion create — and how does it connect to the political conflicts of the late 1960s?",
+      choices:[
+        {text:"Courts protect constitutional rights from majority override — but when courts expand rights aggressively, they generate backlash that reshapes elections and future court appointments",correct:true,feedback:"This captures the full cycle of Warren Court politics. The decisions were constitutionally grounded — the Bill of Rights does protect individuals from majority power, which is exactly what courts are designed to enforce. But when courts move faster than public opinion, they generate political reactions that eventually reshape the courts themselves. Nixon's 1968 campaign ran explicitly against the Warren Court, and his four appointments — including Chief Justice Burger — were selected to slow or reverse its direction. The Warren Court's legacy was both a genuine expansion of rights and a political realignment that produced a more conservative judiciary for the next generation.",std:'SS.912.A.7.4'},
+        {text:"The Warren Court's decisions were universally accepted by Americans because expanding rights is always popular in a democratic society",correct:false,feedback:"The opposite is true. Warren Court decisions on criminal rights, school prayer, and desegregation generated intense and sustained opposition. 'Impeach Earl Warren' billboards appeared across the country. Nixon's 1968 campaign made the Warren Court a central target. Rights expansion is often deeply unpopular with those whose power, preferences, or practices it constrains — which is precisely why the Constitution places some rights beyond the reach of popular majorities.",std:'SS.912.A.7.4'},
+        {text:"The Warren Court proved that the Supreme Court should have direct veto power over all congressional legislation to prevent majority tyranny",correct:false,feedback:"The Warren Court used judicial review — which already existed — more aggressively than its predecessors. It did not claim new powers. And judicial review is not a veto over all legislation; it strikes down specific laws that violate specific constitutional provisions. The Warren Court's use of this power was broad and controversial, but it operated within existing constitutional structures.",std:'SS.912.A.7.4'},
+        {text:"The only legitimate way to expand rights in a democracy is through constitutional amendments, not judicial interpretation",correct:false,feedback:"Constitutional amendments are one path to expanding rights, but judicial interpretation of existing constitutional provisions has always been a legitimate and important mechanism. The Bill of Rights has been applied to the states through the Fourteenth Amendment's interpretation by courts, not through new amendments. Requiring a formal amendment for every rights expansion would have made the protection of many rights practically impossible.",std:'SS.912.A.7.4'},
+      ]
+    },
+  ]
+},
+
+// ═══════════════════════════════════════════════════════
+// CHAPTER 4: 1968 — THE YEAR EVERYTHING BROKE
+// NEW — Theme: American Identity · Conflict and Change · Power
+// ── Transition: "As America escalated abroad, divisions at home reached a breaking point" ──
+// Sets up directly into Chapter 5: Into the Quagmire
+// ═══════════════════════════════════════════════════════
+{
+  id:'fracture_1968',
+  num:4,
+  title:'1968: The Year Everything Broke',
+  icon:'🔥',
+  period:'America · 1967–1968',
+  context:"1968 is the year the American political order of the postwar era collapses. January: the Tet Offensive shatters official optimism about Vietnam. March: LBJ announces he will not seek re-election. April: Martin Luther King Jr. is assassinated in Memphis. Cities burn. June: Robert F. Kennedy — running for president, the last hope of the antiwar Democrats — is assassinated in Los Angeles. August: the Democratic National Convention in Chicago becomes a televised war between police and protesters. November: Richard Nixon wins the presidency on a platform of law, order, and 'peace with honor.' The optimism of Kennedy's 1961 inaugural address — the new generation, the new frontier, the torch being passed — has, in seven years, become this: two assassinations, a collapsing war, a fractured party, and a nation that has lost faith in the institutions that governed it. The question 1968 leaves behind is not whether trust in government has been damaged. It is whether it can be repaired — and by whom.",
+  standards:['SS.912.A.7.4','SS.912.A.7.9'],
+  eocFocus:'1968; antiwar movement; counterculture; Nixon election; political fracture; SS.912.A.7.4',
+  keyVocab:[
+    {term:'Counterculture',def:'The broad cultural rebellion of the 1960s — rejecting mainstream values, opposing the war, and demanding that America live up to its stated ideals'},
+    {term:'New Left',def:'Political movement demanding participatory democracy, civil rights, and an end to Vietnam — expressed through SDS, campus protests, and the 1968 Chicago demonstrations'},
+    {term:'Silent Majority',def:'Nixon\'s 1969 term for Americans who supported traditional values and the war effort but did not protest — his political base against the counterculture'},
+    {term:'Law and Order',def:'Nixon\'s 1968 campaign message — a response to urban riots, campus protests, and rising crime that resonated with voters frightened by the decade\'s upheavals'},
+  ],
+  cardEarned:'kent_state',
+  badge:'dove',
+  timelineEntry:{figure:'kent_state',year:'1968',sprite:'🔥',title:'1968: The Breaking Point',desc:'Tet, two assassinations, Chicago, Nixon. The optimism of 1961 became the fracture of 1968. A nation that had trusted its government to lead it through the Cold War discovered that trust had been systematically abused — and the reckoning had only begun.'},
+  beats:[
+    // ── Theme: American Identity · Conflict and Change ──
+    {
+      scene:'fracture_1968',
+      location:'America',
+      date:'January–August 1968',
+      narrative:"You are a college student watching 1968 unfold on television. In January, the Tet Offensive makes it impossible to believe the government's claims that the war is being won. In March, LBJ goes on television and says he will not seek re-election. In April, you watch cities burn after King's assassination. In June, you watch RFK — whose campaign had given the antiwar movement its last mainstream hope — die in a Los Angeles hotel kitchen.\n\nBy August, the Democratic National Convention in Chicago has become a war. Mayor Daley deploys 12,000 police and 5,000 National Guard. Protesters in Grant Park chant 'The whole world is watching' as police charge with batons. Inside the hall, delegates are fighting over the Vietnam platform. Hubert Humphrey — LBJ's Vice President, who has not entered a single primary — is nominated anyway.\n\nOutside, 17 million Americans watching on television see a party destroying itself. Richard Nixon, who had seemed politically finished after losing to Kennedy in 1960, is the Republican nominee. He promises law and order. He promises peace with honor. He doesn't say how.\n\nHe wins.",
+      charVoice:'',
+      decision:"What did Nixon's 1968 election reveal about how the political fractures of the decade had reshaped American politics?",
+      choices:[
+        {text:"Nixon won because he offered a credible alternative vision — that the decade's chaos was the result of Democratic mismanagement, and that order, honor, and competent leadership could restore what had been lost",correct:true,feedback:"This is the political logic of 1968. Nixon's victory was not accidental. He was speaking to real anxieties: urban riots, campus protests, a war that was killing 300 Americans a week with no end in sight, and a sense that the country's institutions had failed. His message — law and order at home, peace with honor abroad — addressed exactly what millions of Americans were most afraid of losing. Whether he could deliver on those promises was a different question. Whether the promises were sincere was a question Watergate would eventually answer.",std:'SS.912.A.7.4'},
+        {text:"Nixon won only because the Democratic Party had been so damaged by Vietnam and the assassinations that any Republican would have won in 1968 regardless of message or candidate",correct:false,feedback:"Democratic damage was real, but Nixon's victory was not inevitable. The race was very close — Nixon won 43.4% to Humphrey's 42.7%, with George Wallace's third-party candidacy taking 13.5%. A different Democratic nominee, different convention optics, or a different October development could have produced a different result. Nixon's specific message — law and order, peace with honor, the Silent Majority — was carefully crafted to speak to specific voter anxieties, and it worked.",std:'SS.912.A.7.4'},
+        {text:"Nixon won because the counterculture had alienated most Americans, who rejected all of the decade's social changes and wanted to return to the values of the 1950s",correct:false,feedback:"The backlash against the counterculture was real and was part of Nixon's coalition. But most Americans did not want to undo all of the decade's changes — civil rights legislation, Medicare, and Social Security remained popular. What Nixon's voters wanted was restoration of order and an end to Vietnam, not a wholesale reversal of the 1960s. Nixon himself signed major environmental and civil rights enforcement legislation as president.",std:'SS.912.A.7.4'},
+        {text:"Nixon won because he secretly negotiated with North Vietnam to delay peace talks until after the election, ensuring the war would continue under his presidency",correct:false,feedback:"There is historical evidence suggesting Nixon's campaign made contact with South Vietnamese officials to discourage them from supporting LBJ's peace talks — a serious allegation that has never been fully proven or prosecuted. But the election's outcome was driven by the genuine political dynamics of 1968: Vietnam, urban unrest, and the collapse of the Democratic coalition. Whether the alleged interference affected the outcome is historically contested.",std:'SS.912.A.7.4'},
+      ]
+    },
+    // ── Theme: American Identity · Conflict and Change ──
+    {
+      scene:'fracture_1968',
+      location:'College campuses and streets across America',
+      date:'1967–1968 — The Counterculture',
+      narrative:"The counterculture is not a single thing. It is a generation — the baby boomers, the largest in American history — coming of age in a decade of assassinations, civil rights marches, and a war they are being drafted to fight.\n\nSome express their dissent through music: Dylan, Baez, the Beatles, Hendrix. Some through protest: SDS chapters on hundreds of campuses, marches on Washington, draft card burnings. Some through lifestyle: communes, long hair, sexual liberation, drug experimentation. Some through political organizing: the New Left's demand for participatory democracy and an end to corporate and government power.\n\nWhat they share is a belief that the American establishment — government, corporations, universities, the military-industrial complex — has failed to live up to America's stated ideals. They are not anti-American. Many are fiercely idealistic about what America should be. They are against what America actually is.\n\nThe Silent Majority, Nixon's phrase, is just as real. Millions of older, more conservative Americans — working-class, religious, patriotic in a traditional sense — are watching the counterculture with fury. They see not idealism but disorder. Not protest but disrespect. The generation gap is not just cultural. It is political. And Nixon has chosen his side.",
+      charVoice:'',
+      decision:"What was the counterculture's core argument about America — and why did it generate such a fierce political backlash?",
+      choices:[
+        {text:"The counterculture argued that America's stated ideals of freedom, equality, and democracy had not been honored — and that confronting that gap was a patriotic, not anti-American, act",correct:true,feedback:"This is the most historically accurate characterization of the counterculture's core argument. The protesters, activists, and cultural rebels of the 1960s were largely not arguing that America's ideals were wrong — they were arguing that America was failing to live up to them. Black Americans demanding civil rights, students protesting a war built on deception, women demanding equal treatment — all were holding America accountable to its own promises. The backlash was fierce precisely because the argument was uncomfortable: it forced Americans to confront the gap between the country's self-image and its actual behavior.",std:'SS.912.A.7.9'},
+        {text:"The counterculture was primarily a lifestyle movement focused on personal liberation with no serious political analysis or goals",correct:false,feedback:"Personal liberation was part of the counterculture, but the political analysis was serious and engaged. The Port Huron Statement, SDS's founding document, was a sophisticated critique of corporate capitalism, Cold War militarism, and institutional racism. The antiwar movement produced detailed policy analysis. King's Riverside speech connecting Vietnam and racial injustice was a work of political philosophy. The counterculture was many things — some more serious than others — but dismissing its political content misses what made it historically significant.",std:'SS.912.A.7.9'},
+        {text:"The counterculture was the result of Soviet propaganda specifically designed to destabilize American society during the Cold War",correct:false,feedback:"The FBI and some conservative politicians made this argument at the time, and the FBI's COINTELPRO program was designed partly on this premise. But the historical evidence does not support it. The movements emerged from genuine American tensions: the contradiction between civil rights ideals and Jim Crow, the reality of Vietnam, the draft, and the experiences of young people confronting institutions they found unresponsive. The FBI's attempts to prove communist orchestration found grassroots movements, not foreign direction.",std:'SS.912.A.7.9'},
+        {text:"The backlash against the counterculture was irrational and based entirely on racism and fear rather than any legitimate political values",correct:false,feedback:"The backlash contained real political values, not just fear and prejudice. Many Americans who opposed the counterculture held genuine convictions about patriotism, personal responsibility, the rule of law, and the importance of civic order. Working-class Americans who had followed the rules, served in the military, and built stable lives had real grievances when they saw institutions they respected being publicly attacked. The backlash was politically exploitable — Nixon exploited it masterfully — but it was not simply irrational.",std:'SS.912.A.7.9'},
+      ]
+    },
+    // ── FINAL SYNTHESIS / TRANSITION INTO VIETNAM UNIT ──
+    {
+      scene:'fracture_1968',
+      location:'America — The Edge of a New Era',
+      date:'January 1969 — Nixon Takes Office',
+      narrative:"Richard Nixon is sworn in on January 20, 1969. He inherits:\n\n— 543,000 American troops in Vietnam, dying at 300 per week.\n— A credibility gap so wide that a majority of Americans no longer believe what their government tells them about the war.\n— A Democratic Party shattered by assassination and internal conflict.\n— A counterculture that has made generational conflict a permanent feature of American politics.\n— A Great Society that is already being underfunded by the costs of the war it was supposed to coexist with.\n— Public trust in the federal government that has fallen from 75% in 1964 to under 50% in 1969.\n\nNixon promised peace with honor. He promised to bring America together. He promised law and order.\n\nWhat he will deliver — secret bombings, an enemies list, the Saturday Night Massacre, and finally resignation in disgrace — is a story that will answer one of the decade's central questions:\n\nCan democratic institutions survive a president who believes the rules don't apply to him?\n\nThe 1960s are over. The reckoning is just beginning.",
+      charVoice:'',
+      // ── All five themes converge here ── Power · Freedom and Rights · Economy and Work · Conflict and Change · American Identity
+      decision:"As Nixon takes office in 1969, which development from the 1960s most directly sets up the crises that will follow?",
+      choices:[
+        {text:"The credibility gap — the systematic deception of the American public about Vietnam — established a pattern of executive dishonesty that Nixon would expand until it destroyed his presidency",correct:true,feedback:"The credibility gap is the essential bridge between the 1960s and Watergate. LBJ's administration had demonstrated that presidents could conduct major policy while systematically misleading the public — and that the political costs, though eventually fatal, came slowly. Nixon drew the wrong lesson: not that deception was ultimately unsustainable, but that it could be managed more effectively. His expansion of the credibility gap — secret bombing campaigns, the Plumbers unit, the cover-up — applied the same logic of executive deception to domestic political enemies. The pattern established in Vietnam became the pattern of Watergate.",std:'SS.912.A.7.4'},
+        {text:"The Gulf of Tonkin Resolution — the transfer of war-making authority from Congress to the president — gave Nixon the legal framework to continue and expand the war without congressional authorization",correct:true,feedback:"The Gulf of Tonkin Resolution was still in effect when Nixon took office, giving him — as it had given Johnson — essentially unlimited authority to conduct military operations in Southeast Asia. Nixon used that authority to secretly bomb Cambodia, expand operations in Laos, and continue the war for four more years. The War Powers Resolution of 1973, passed over Nixon's veto, was Congress's belated attempt to reclaim the authority it had surrendered in 1964. The lesson: emergency powers granted in a moment of crisis are very difficult to reclaim.",std:'SS.912.A.7.4'},
+        {text:"The collapse of the Democratic coalition in 1968 — fractured by Vietnam and the assassinations — left Nixon without effective political opposition, enabling the abuses of power that became Watergate",correct:true,feedback:"Political context matters. Nixon's willingness to expand executive power was enabled partly by the weakness of his opposition. The Democratic Party that had passed the Great Society was shattered in 1968. The antiwar movement was fragmented and often radical in ways that alienated mainstream voters. Congress was slow to reassert its authority. Nixon's landslide in 1972 — 49 states — gave him a sense of political invulnerability that contributed directly to the Watergate overreach. Strong opposition parties are themselves a democratic safeguard.",std:'SS.912.A.7.4'},
+        {text:"The growth of the federal government under the Great Society — which expanded presidential power and resources — gave Nixon the institutional tools to conduct the abuses that became Watergate",correct:true,feedback:"The expanded federal government of the 1960s did create the institutional infrastructure Nixon would misuse. The FBI, CIA, IRS, and Justice Department — all significantly expanded in the postwar period — became instruments of political abuse in Nixon's hands. COINTELPRO, the enemies list, the tax audits of political opponents, the Plumbers unit — all operated through existing federal agencies. The same government capacity that funded Medicare could be directed against political enemies. Watergate revealed that the question of who controls powerful institutions — and whether they are accountable — is never fully resolved.",std:'SS.912.A.7.4'},
+      ]
+    },
+  ]
+},
+
+// ═══════════════════════════════════════════════════════
+// CHAPTER 5: INTO THE QUAGMIRE (was Ch.1 — now follows prologue)
 // ═══════════════════════════════════════════════════════
 {
   id:'quagmire',
-  num:1,
+  num:5,
   title:'Into the Quagmire',
   icon:'🌿',
   period:'Southeast Asia and Washington D.C.  -  1954 to 1965',
@@ -1004,11 +1401,11 @@ const CHAPTERS=[
   ]
 },
 // ═══════════════════════════════════════════════════════
-// CHAPTER 2: FIGHTING AN UNWINNABLE WAR
+// CHAPTER 6: FIGHTING AN UNWINNABLE WAR (was Ch.2)
 // ═══════════════════════════════════════════════════════
 {
   id:'fighting_jungle',
-  num:2,
+  num:6,
   title:'Fighting an Unwinnable War',
   icon:'🌙',
   period:'Vietnam and the United States  -  1967 to 1968',
@@ -1088,7 +1485,7 @@ const CHAPTERS=[
 // ═══════════════════════════════════════════════════════
 {
   id:'america_turns',
-  num:3,
+  num:7,
   title:'America Turns Against the War',
   icon:'✌️',
   period:'The United States  -  1968 to 1970',
@@ -1150,11 +1547,11 @@ const CHAPTERS=[
   ]
 },
 // ═══════════════════════════════════════════════════════
-// CHAPTER 4: NIXON AND PEACE WITH HONOR
+// CHAPTER 8: NIXON AND PEACE WITH HONOR (was Ch.4)
 // ═══════════════════════════════════════════════════════
 {
   id:'nixon_peace',
-  num:4,
+  num:8,
   title:'Nixon and Peace with Honor',
   icon:'🤝',
   period:'Washington D.C. and Southeast Asia  -  1969 to 1973',
@@ -1234,7 +1631,7 @@ const CHAPTERS=[
 // ═══════════════════════════════════════════════════════
 {
   id:'nixon_rise',
-  num:5,
+  num:9,
   title:'Nixon, Détente, and the New World',
   icon:'🌐',
   period:'Washington D.C. and the World  -  1969 to 1973',
@@ -1296,11 +1693,11 @@ const CHAPTERS=[
   ]
 },
 // ═══════════════════════════════════════════════════════
-// CHAPTER 6: WATERGATE AND THE COLLAPSE OF TRUST
+// CHAPTER 10: WATERGATE (was Ch.6) AND THE COLLAPSE OF TRUST
 // ═══════════════════════════════════════════════════════
 {
   id:'watergate',
-  num:6,
+  num:10,
   title:'Watergate and the Collapse of Trust',
   icon:'🔦',
   period:'Washington D.C.  -  1972 to 1974',
@@ -1929,7 +2326,7 @@ function renderTeacherView(all,period){
 async function deleteStudent(name,period){
   if(!confirm(`Remove "${name}" from the leaderboard?`))return;
   try{
-    await fetch(SUPA_URL+'/rest/v1/scores?name=eq.'+encodeURIComponent(name)+'&period=eq.'+encodeURIComponent(period),{method:'DELETE',headers:SUPA_HEADERS});
+    await fetch(SUPA_URL+'/rest/v1/scores?name=eq.'+encodeURIComponent(name)+'&period=eq.'+encodeURIComponent(period)+'&game=eq.napalm_dawn',{method:'DELETE',headers:SUPA_HEADERS});
     notify(name+' removed','green');loadTeacherData();
   }catch(e){notify('Error removing student','red');}
 }
