@@ -290,11 +290,19 @@ body::after{content:'';position:fixed;inset:0;
     <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
       <button class="btn green sm" onclick="replayGame()"><span>↺ Play Again</span></button>
       <button class="btn sm" onclick="openLeaderboard()"><span>🏆 Final Leaderboard</span></button>
+      <!-- SHELL INTEGRATION: return to shell on completion -->
+      <button class="btn sm" id="journey-shell-btn" style="display:none;border-color:var(--teal);color:var(--teal);" onclick="returnToShell()"><span>🏛️ Return to Hub</span></button>
     </div>
     <div style="font-family:var(--dm);font-size:9px;color:var(--text3);margin-top:10px;letter-spacing:1px">Your score and badges are saved. Replaying resets chapters only.</div>
   </div>
   <div id="teacher-btn-wrap" style="display:none;margin-bottom:10px">
     <button class="btn full blue" onclick="openTeacherDashboard()"><span>📊 Open Teacher Dashboard</span></button>
+  </div>
+  <!-- SHELL INTEGRATION: Return to hub — only shown when launched from shell -->
+  <div id="shell-return-btn" style="display:none;margin-bottom:12px">
+    <button class="btn full" onclick="returnToShell()" style="border-color:var(--teal);color:var(--teal);">
+      <span>← Return to American Chronicles Hub</span>
+    </button>
   </div>
   <div class="section-head" style="font-size:13px">Overarching Question</div>
   <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--amber);padding:14px;margin-bottom:16px;font-family:var(--crimson);font-size:15px;color:var(--text2);font-style:italic;line-height:1.6">
@@ -466,7 +474,6 @@ body::after{content:'';position:fixed;inset:0;
       <div style="font-family:var(--crimson);font-size:14px;color:var(--text2);font-style:italic;margin-bottom:20px">Who is your US History teacher?</div>
       <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:14px">
         <div onclick="selectTeacher('olson')" style="padding:14px;cursor:pointer;border:1.5px solid var(--border2);background:var(--bg3)"><div style="font-family:var(--bebas);font-size:20px;color:var(--amber)">Mr. Olson</div></div>
-        <div onclick="selectTeacher('smith')" style="padding:14px;cursor:pointer;border:1.5px solid var(--border2);background:var(--bg3)"><div style="font-family:var(--bebas);font-size:20px;color:var(--amber)">Mrs. Smith</div></div>
         <div onclick="selectTeacher('guest')" style="padding:14px;cursor:pointer;border:1.5px solid var(--border2);background:var(--bg3)"><div style="font-family:var(--bebas);font-size:16px;color:var(--text2)">Guest / Other</div></div>
       </div>
       <button class="btn full" style="border-color:var(--border2);color:var(--text3);font-size:11px" onclick="document.getElementById('code-gate-overlay').style.display='none'"><span>Cancel</span></button>
@@ -496,6 +503,8 @@ body::after{content:'';position:fixed;inset:0;
   <button class="bn-btn" onclick="openProfile()"><span class="bn-icon">🌿</span>Profile</button>
   <button class="bn-btn" onclick="openShop()"><span class="bn-icon">🛒</span>Shop</button>
   <button class="bn-btn" onclick="openCardCollection()"><span class="bn-icon">🃏</span>Cards</button>
+  <!-- SHELL INTEGRATION: shown only when launched from shell -->
+  <button class="bn-btn" id="shell-nav-btn" style="display:none;color:var(--teal);" onclick="returnToShell()"><span class="bn-icon">🏛️</span>Hub</button>
 </div>
 </div><!-- /#root -->
 <div id="print-area" style="display:none"></div>
@@ -505,8 +514,7 @@ const SUPA_URL='https://iluvuartxsenbgylogit.supabase.co';
 const SUPA_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlsdXZ1YXJ0eHNlbmJneWxvZ2l0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM4NjA2OTIsImV4cCI6MjA4OTQzNjY5Mn0.stAmdi5xy7ofDAB4AiRg78Eoky-7FXZEa-Ui1dgwHd0';
 const SUPA_HEADERS={'Content-Type':'application/json','apikey':SUPA_KEY,'Authorization':'Bearer '+SUPA_KEY};
 const TEACHERS={
-  'olson':{name:'Mr. Olson',periods:['3','5','6'],teacherCode:'OLSON219'},
-  'smith':{name:'Mrs. Smith',periods:['1','2','3','4','6','7'],teacherCode:'SMITH225'},
+  'olson':{name:'Mr. Olson',periods:['1','2','3','4','5','6','7'],teacherCode:'OLSON219'},
 };
 let G=null,currentChapterIdx=0,currentBeatIdx=0,chapterScore=0,chapterCorrect=0,chapterTotal=0,answeredCurrent=false,chapterLog=[];
 
@@ -1769,6 +1777,57 @@ function newGame(){
 function save(){if(!G)return;try{localStorage.setItem(SAVE_KEY,JSON.stringify(G));}catch(e){}pushLeaderboard();}
 function load(){try{const d=localStorage.getItem(SAVE_KEY);if(d){G=JSON.parse(d);return true;}}catch(e){}return false;}
 
+// ═══════════════════════════════════════════════════════════════════════
+//  AMERICAN CHRONICLES SHELL INTEGRATION
+//  Reads the shared profile written by the shell on the same domain.
+//  If a shell profile exists, the student skips login entirely.
+//  On completion, writes back so the shell tracks progress.
+// ═══════════════════════════════════════════════════════════════════════
+const SHELL_KEY     = 'ac_shell_state'; // must match shell's localStorage key
+const SHELL_UNIT_ID = 'unit7b';         // this game's ID in the shell's UNIT_DATA
+
+function getShellProfile() {
+  try {
+    const raw = localStorage.getItem(SHELL_KEY);
+    if (!raw) return null;
+    const p = JSON.parse(raw);
+    // Accept real named profiles — students (setupDone) and teachers (isTeacher)
+    if (p && p.name && p.name !== 'Guest') return p;
+  } catch(e) {}
+  return null;
+}
+
+function applyShellProfile(profile) {
+  G = newGame();
+  G.name     = profile.name;
+  G.period   = profile.period ? ('shell-' + profile.period) : 'shell-0';
+  G.teacher  = 'shell';
+  G.isTeacher = profile.isTeacher || false;
+  const avatarMap = {
+    scholar:'student_m', rebel:'student_f', soldier:'soldier_m',
+    reporter:'student_f', pioneer:'student_m', diplomat:'soldier_m',
+    worker:'student_m', artist:'student_f',
+  };
+  G.avatarId = avatarMap[profile.avatar] || 'student_m';
+  save();
+}
+
+function notifyShellComplete() {
+  try {
+    const raw = localStorage.getItem(SHELL_KEY);
+    if (!raw) return;
+    const s = JSON.parse(raw);
+    if (!s.unitsCompleted) s.unitsCompleted = [];
+    if (!s.unitsCompleted.includes(SHELL_UNIT_ID)) s.unitsCompleted.push(SHELL_UNIT_ID);
+    localStorage.setItem(SHELL_KEY, JSON.stringify(s));
+  } catch(e) {}
+}
+
+function returnToShell() {
+  // ── UPDATE THIS URL when the shell is deployed ──
+  window.location.href = 'https://olsonjoshua-code.github.io/american-chronicles/';
+}
+
 // ── LEADERBOARD ──
 async function pushLeaderboard(){
   if(!G||!G.name||G.name.length<2)return;
@@ -1833,8 +1892,30 @@ function init(){
     pct+=Math.random()*20;if(pct>=100){pct=100;clearInterval(iv);
       setTimeout(()=>{
         const ls=document.getElementById('loading-screen');ls.style.opacity='0';setTimeout(()=>ls.style.display='none',500);
-        if(load()&&G&&G.name)document.getElementById('btn-continue').style.display='block';
         document.getElementById('title-scene-art').innerHTML=SCENES.protest_march||'';
+
+        // ── SHELL INTEGRATION: auto-login if shell profile exists ──
+        const shellProfile = getShellProfile();
+        if (shellProfile) {
+          if (load() && G && G.name && G.teacher === 'shell') {
+            // Returning shell user — continue existing save
+            showGameUI(); renderHub(); showScreen('hub-screen');
+            notify('Welcome back, ' + G.name + '!', 'green');
+          } else {
+            // First time from shell — apply profile
+            applyShellProfile(shellProfile);
+            if (shellProfile.isTeacher) {
+              showGameUI(); renderHub(); showScreen('hub-screen');
+              notify('Welcome, ' + shellProfile.name + '! 📊', 'green');
+            } else {
+              showCharScreen();
+              notify('Welcome, ' + shellProfile.name + '! Profile loaded from hub.', 'green');
+            }
+          }
+          return;
+        }
+        // ── No shell profile — normal standalone login ──
+        if(load()&&G&&G.name)document.getElementById('btn-continue').style.display='block';
       },200);
     }
     bar.style.width=Math.min(100,pct)+'%';
@@ -1929,7 +2010,18 @@ function confirmCharacter(){
 }
 
 // ── HUD / GAME UI ──
-function showGameUI(){document.getElementById('game-header').style.display='block';document.getElementById('bottom-nav').style.display='grid';updateHUD();}
+function showGameUI(){
+  document.getElementById('game-header').style.display='block';
+  document.getElementById('bottom-nav').style.display='grid';
+  // ── SHELL INTEGRATION: reveal return buttons if launched from shell ──
+  if (getShellProfile()) {
+    const retBtn = document.getElementById('shell-return-btn');
+    if (retBtn) retBtn.style.display = 'block';
+    const navBtn = document.getElementById('shell-nav-btn');
+    if (navBtn) navBtn.style.display = 'block';
+  }
+  updateHUD();
+}
 function updateHUD(){
   if(!G)return;
   const av=AVATARS.find(a=>a.id===G.avatarId);
@@ -1947,6 +2039,9 @@ function updateHUD(){
 function renderHub(){
   if(!G)return;updateHUD();
   document.getElementById('teacher-btn-wrap').style.display=G.isTeacher?'block':'none';
+  // ── SHELL INTEGRATION: reveal shell return button in journey banner ──
+  const journeyShellBtn = document.getElementById('journey-shell-btn');
+  if (journeyShellBtn && getShellProfile()) journeyShellBtn.style.display = 'inline-flex';
   const av=AVATARS.find(a=>a.id===G.avatarId);
   document.getElementById('hub-avatar').innerHTML=`<div style="width:60px;height:60px">${av?makeAvatar(av.id):''}</div>`;
   document.getElementById('hub-player-name').textContent=G.name;
@@ -2108,7 +2203,11 @@ function checkAchievements(){
   const add=(id)=>{if(!G.earnedBadges.includes(id)){G.earnedBadges.push(id);const b=BADGES.find(x=>x.id===id);if(b)notify('🏅 Badge: '+b.name);}};
   if(G.completedChapters.length>=1)add('first_briefing');
   CHAPTERS.forEach(ch=>{if(G.completedChapters.includes(ch.id)&&ch.badge)add(ch.badge);});
-  if(G.completedChapters.length>=CHAPTERS.length)add('unit_complete');
+  if(G.completedChapters.length>=CHAPTERS.length){
+    add('unit_complete');
+    // ── SHELL INTEGRATION: write completion back to shell profile ──
+    notifyShellComplete();
+  }
   if(G.unlockedCards.length>=CARDS.length)add('historian');
   if(G.score>=1000)add('score_1000');if(G.score>=5000)add('score_5000');if(G.score>=10000)add('score_10000');
   if(G.unlockedCards.length>=5)add('card_collector');
